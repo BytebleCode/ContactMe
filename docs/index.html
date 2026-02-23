@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brock Varzaly - Contact</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f2f5;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      max-width: 360px;
+      width: 90%;
+    }
+    .name { font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; }
+    .info { margin: 10px 0; color: #555; }
+    .info a { color: #0066cc; text-decoration: none; }
+    .info a:hover { text-decoration: underline; }
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 10px 24px;
+      background: #0066cc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover { background: #0052a3; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="name">Brock Varzaly</div>
+    <div class="info"><a href="tel:+19139994882">+1 (913) 999-4882</a></div>
+    <div class="info"><a href="mailto:varzalybrock@gmail.com">varzalybrock@gmail.com</a></div>
+    <a class="btn" href="contact.vcf" download="contact.vcf">Save Contact</a>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      window.location.href = 'contact.vcf';
+    });
+  </script>
+</body>
+</html>
