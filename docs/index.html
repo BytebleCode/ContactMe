@@ -47,11 +47,24 @@
     <div class="name">Brock Varzaly</div>
     <div class="info"><a href="tel:+19139994882">+1 (913) 999-4882</a></div>
     <div class="info"><a href="mailto:varzalybrock@gmail.com">varzalybrock@gmail.com</a></div>
-    <a class="btn" href="contact.vcf" download="contact.vcf">Save Contact</a>
+    <a class="btn" id="saveBtn" href="#">Save Contact</a>
   </div>
   <script>
+    var vcf = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'FN:Brock Varzaly',
+      'N:Varzaly;Brock;;;',
+      'TEL;TYPE=CELL:+19139994882',
+      'EMAIL;TYPE=INTERNET:varzalybrock@gmail.com',
+      'END:VCARD'
+    ].join('\n');
+    var uri = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcf);
+
+    document.getElementById('saveBtn').href = uri;
+
     window.addEventListener('load', function () {
-      window.location.href = 'contact.vcf';
+      window.location.href = uri;
     });
   </script>
 </body>
